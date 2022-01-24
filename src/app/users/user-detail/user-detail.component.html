@@ -1,0 +1,27 @@
+<h4>Thông tin người dùng: {{ user?.name }} </h4>
+<table *ngIf="user" class="table" >
+  <tr>
+    <td>Name</td>
+    <td>{{user.name}}</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>{{user.email}}</td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td>{{user.phone}}</td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>{{user.address}}</td>
+  </tr>
+</table>
+<button class="btn btn-info" routerLink="../../">Back</button>
+<div *ngIf="logs.length > 0">
+  <ul>Log
+    <li *ngFor="let log of logs">
+      {{ log }}
+    </li>
+  </ul>
+</div>
